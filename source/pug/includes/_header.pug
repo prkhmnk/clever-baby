@@ -1,0 +1,15 @@
+header.header
+  a.header__logo(aria-label="Иконка логотипа магазина")
+  nav.nav(aria-label="Навигация")
+    button.nav__toggle.nav__toggle--open(type="button" aria-expanded="false")
+      span.visually-hidden Открыть меню
+    button.nav__toggle.nav__toggle--close(type="button" aria-expanded="true")
+      span.visually-hidden Закрыть меню
+    .nav__wrapper
+      ul.nav__list(role="menubar")
+        li.nav__item: a.nav__item(href="#" role="menuitem") Методика
+        li.nav__item: a.nav__item(href="#" role="menuitem") Преподаватели
+        li.nav__item: a.nav__item(href="#" role="menuitem") Группы
+        li.nav__item: a.nav__item(href="#" role="menuitem") Отзывы
+        li.nav__item: a.nav__item(href="#" role="menuitem") Контакты
+      a.nav__feedback(href="tel:+74959834719") + 7 (495) 983-47-19

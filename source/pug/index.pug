@@ -1,11 +1,104 @@
-doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  title Clever Baby - Учебный центр
-  meta(name='Description' content='Страница учебного центра Clever Baby')
-body
-  header.header
-  main
-  footer.footer
+extends includes/template.pug
+
+block content
+
+  h1.visually-hidden Школа английского языка для детей Clever Baby
+
+  section.lead
+    .lead__wrapper
+      h2.lead__title Английский язык #[span для детей от 2 до 7 лет]
+      p.lead__description Гармоничное развитие детей и обучение через полное погружение в языковую среду
+      a.lead__enroll(href="#") Записаться
+
+  section.training
+    .training__wrapper
+      h2.training__title Как проходит обучение
+      .training__explanation
+        h3.training__subtitle Играя — обучаем, обучая — развиваем
+        p.training__description Мы взяли все самое лучшее из традиционных и современных методик обучения и развития детей. Обучение английскому языку происходит легко и интересно, ведь малыши не зубрят материал по учебникам, а познают его через игру, сказки, книги и музыку.
+        p.training__description Наша методика также включает в себя обучение по программе Cambridge. Благодаря этому, наши ученики без труда сдают международные и государственные экзамены.
+      .training__demonstration
+        h3.training__subtitle Посмотрите, как проходят наши занятия
+        .process__video На картинке играющий малыш
+
+  section.features
+    .features__wrapper
+      h2.visually-hidden Наши преимущества
+      ul.features__list
+        li.features__item
+          h3.features__title Развитие 10 видов интеллекта
+          p Учимся общаться, развивать эмоциональный, творческий интеллект и многое другое
+        li.features__item
+          h3.features__title Языковое погружение
+          p Занятия проходят полностью на английском языке, независимо от типа задания
+        li.features__item
+          h3.features__title Педагоги — носители языка
+          p Занятия ведут преподаватели из США, Великобритании и Канады, для которых английский язык является родным
+        li.features__item
+          h3.features__title Небольшие группы
+          p Дети занимаются в группах до 5 человек, что позволяет применять индивидуальный подход к каждому
+
+  section.groups
+    .groups__wrapper
+      h2.groups__title Наши группы
+      p.groups__description В группах занимается до 5 человек. Все дети в группе примерно одного возраста и уровня знаний.
+      ul.groups__list
+        +group(1, "1,5", 2000)
+        +group(2, "1,5", 4000)
+        +group(3, 1, 4000)
+        //- li.groups__item
+        //-   h3.groups__title Бэбики-1
+        //-   p.groups__frequency 1 раз в неделю
+        //-   p.groups__duration 1,5 часа занятие
+        //-   p.groups__price #[span 2000] в месяц
+        //-   a.groups__enroll(href="#") Записаться
+        //- li.groups__item
+        //-   h3.groups__title Бэбики-2
+        //-   p.groups__frequency 2 раза в неделю
+        //-   p.groups__duration 1,5 часа занятие
+        //-   p.groups__price #[span 4000] в месяц
+        //-   a.groups__enroll(href="#") Записаться
+        //- li.groups__item
+        //-   h3.groups__title Бэбики-3
+        //-   p.groups__frequency 3 раза в неделю
+        //-   p.groups__duration 1 час занятие
+        //-   p.groups__price #[span 4000] в месяц
+        //-   a.groups__enroll(href="#") Записаться
+
+  section.teachers.slider
+    .teachers__wrapper
+      h2.teachers__title Наши преподаватели
+      p.teachers__description Все наши преподаватели — носители английского языка и имеют необходимое образование и опыт работы с детьми
+      ul.teachers__list
+        each item in teachers
+          +teacher(item.name, item.url, item.country)
+      .slider__controls
+        button.slider__control.slider__control--prev(type="button" aria-label="Предыдущий учитель")
+        button.slider__control.slider__control--next(type="button" aria-label="Следующий учитель")
+
+  section.trial
+    .trial__wrapper
+      h2.trial__title Запишитесь на бесплатное пробное занятие
+      p.trial__description Приходите к нам в гости и мы познакомим вас с педагогами, расскажем о школе и ответим на все ваши вопросы
+      a.trial__enroll(href="#") Записаться
+
+  section.contacts
+    h2.contacts__title Мы ждем вас
+    dl.contacts__list
+      dt.contacts__subtitle Приходите к нам:
+      dd.contacts__description Санкт-Петербург, ул. Большая Конюшенная, 19
+      dt.contacts__subtitle Режим работы:
+      dd.contacts__description Пн-Сб, с 9-00 до 20-00
+      dt.contacts__subtitle Позвоните нам:
+      dd.contacts__description: a.nav__feedback(href="tel:+74959834719") + 7 (495) 983-47-19
+      dt.contacts__subtitle Напишите нам:
+      dd.contacts__description: a.nav__feedback(href="mailto:info@cleverbaby.ru") info@cleverbaby.ru
+      dt.contacts__subtitle Мы в соцсетях:
+      dd.contacts__description.social-media
+        ul.social-media__list
+          each item in socialMedia
+            +socialMediaItem(item.href, item.label)
+
+  section.map
+    h2.visually-hidden Карта с нашим местоположением
+    div#map.map__wrapper Карта с нашим местонахождением

@@ -1,0 +1,22 @@
+mixin teacher(name, url, country)
+  li.teachers__item
+    address.teachers__name #{name}
+    img.teachers__img(src=url alt=name width="198" height="220")
+    p.teachers__location #{country}
+
+mixin socialMediaItem(href, label)
+  li.social-media__item
+    a.social-media__link(
+      href=href
+      aria-label=label
+      target="_blank"
+      rel="noreferrer"
+    )
+
+mixin group(num, duration, price)
+  li.groups__item
+    h3.groups__title Бэбики-#{num}
+    p.groups__frequency #{num} раз в неделю
+    p.groups__duration #{duration} часа занятие
+    p.groups__price #[span #{price}] в месяц
+    a.groups__enroll(href="#") Записаться

@@ -1,0 +1,26 @@
+block config
+  include ./config.pug
+
+include ./mixins.pug
+
+doctype html
+html.page(lang=lang)
+  head
+    block metatags
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      meta(name="Description" content=description)
+    title #{title}
+    block links
+
+  body
+
+    include ./_header.pug
+
+    main
+      block content
+
+    include ./_footer.pug
+
+    block scripts
