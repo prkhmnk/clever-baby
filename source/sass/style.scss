@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// Global Styles
+
+@import "vendor/_normalize.scss";
+@import "global/_fonts.scss";
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_common.scss";
+
+// General Styles
+
+@import "blocks/_header.scss";
+@import "blocks/_nav.scss";
+@import "blocks/_lead.scss";
+@import "blocks/_section.scss";
+@import "blocks/_training.scss";
+@import "blocks/_features.scss";
+@import "blocks/_groups.scss";
+@import "blocks/_slider.scss";
+@import "blocks/_teachers.scss";
+@import "blocks/_trial.scss";
+@import "blocks/_contacts.scss";
+@import "blocks/_social-media.scss";
+@import "blocks/_map.scss";
+@import "blocks/_footer.scss";

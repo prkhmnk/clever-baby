@@ -1,0 +1,16 @@
+.groups__list {
+  list-style: none;
+}
+
+.groups__item {
+  border: 3px solid $accent-color;
+  border-radius: 12px;
+
+  &--1 {
+    border-color: $additional-cyan-color;
+  }
+
+  &--3 {
+    border-color: $additional-pink-color;
+  }
+}

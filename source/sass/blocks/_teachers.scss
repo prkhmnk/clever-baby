@@ -1,0 +1,13 @@
+.teachers__list {
+  list-style: none;
+}
+
+.teachers__name {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.teachers__location {
+  color: $secondary-text-color;
+}

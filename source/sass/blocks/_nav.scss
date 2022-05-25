@@ -1,0 +1,16 @@
+.nav {
+  line-height: 1.4;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__link {
+  color: $basic-text-color;
+}
+
+.nav__feedback {
+  font-size: 18px;
+  color: $basic-text-color;
+}

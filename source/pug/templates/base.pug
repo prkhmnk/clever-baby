@@ -1,7 +1,8 @@
 block config
   include ./config.pug
 
-include ./mixins.pug
+include ../mixins/_teacher.pug
+include ../mixins/_social-media-item.pug
 
 doctype html
 html.page(lang=lang)
@@ -13,14 +14,16 @@ html.page(lang=lang)
       meta(name="Description" content=description)
     title #{title}
     block links
+      link(rel="preload" href=basicFont as="font")
+      link(rel="stylesheet" href="css/style.min.css")
 
-  body
+  body.page__body
 
-    include ./_header.pug
+    include ../includes/_header.pug
 
     main
       block content
 
-    include ./_footer.pug
+    include ../includes/_footer.pug
 
     block scripts

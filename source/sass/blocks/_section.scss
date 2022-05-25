@@ -1,0 +1,26 @@
+.section__title {
+  font-family: $additional-font;
+  line-height: 1.4;
+  font-size: 36px;
+}
+
+.section__subtitle {
+  line-height: 1.4;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.section__enroll {
+  background-color: $accent-color;
+  font-weight: 500;
+  color: $basic-text-color;
+  border-radius: 35px;
+
+  &--baby-1 {
+    background-color: $additional-cyan-color;
+  }
+
+  &--baby-3 {
+    background-color: $additional-pink-color;
+  }
+}
